@@ -1,5 +1,7 @@
-import Car from "components/car";
 import React from "react";
+import { Link } from "react-router-dom";
+import Car from "components/car";
+import Button from "components/button";
 
 import * as S from "./style";
 
@@ -30,15 +32,27 @@ const PopularCars = () => {
     isSale: true,
   };
 
+  const cars = [
+    <Car {...testCar} />,
+    <Car {...testCar2} />,
+    <Car {...testCar} />,
+    <Car {...testCar2} />,
+  ];
+
   return (
     <S.PopularCarsContainer>
-      <S.Title>Explore Our Popular Cars</S.Title>
+      <S.TopPopular>
+        <S.Title>Popular Car</S.Title>
+        <S.ButtonViewAll>View All</S.ButtonViewAll>
+      </S.TopPopular>
       <S.CarsContainer>
-        <Car {...testCar} />
-        <Car {...testCar2} />
-        <Car {...testCar} />
-        <Car {...testCar2} />
+        {cars.map((item) => {
+          return item;
+        })}
       </S.CarsContainer>
+      <Link to="/cars">
+        <Button className="popular--show-more">Show more cars</Button>
+      </Link>
     </S.PopularCarsContainer>
   );
 };
