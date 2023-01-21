@@ -34,7 +34,7 @@ Button.propTypes = {
   type: PropTypes.string.isRequired,
   styles: PropTypes.string,
   themes: PropTypes.string,
-  children: PropTypes.node || PropTypes.string,
+  children: PropTypes.node,
   isLoading: PropTypes.bool,
   className: PropTypes.string,
 };

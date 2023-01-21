@@ -21,7 +21,7 @@ const Home = () => {
           <BookingSteps title="Our Working Steps" />
           <Marginer direction="vertical" margin="6em" />
           <PopularCars />
-          <Marginer direction="vertical" margin="4em" />
+          <Marginer direction="vertical" margin="2em" />
           <AboutUs />
         </S.HomeContainer>
       </LayoutHome>

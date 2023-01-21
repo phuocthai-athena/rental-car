@@ -15,7 +15,8 @@ const PopularCars = () => {
     gearType: "Auto",
     dailyPrice: 70,
     salePrice: null,
-    people: 2,
+    discount: null,
+    people: 4,
     isSale: false,
   };
 
@@ -27,8 +28,9 @@ const PopularCars = () => {
     gas: "90L",
     gearType: "Auto",
     dailyPrice: 70,
-    salePrice: 60,
-    people: 2,
+    salePrice: 56,
+    discount: 20,
+    people: 4,
     isSale: true,
   };
 

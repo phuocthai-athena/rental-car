@@ -17,6 +17,7 @@ const Car = (props) => {
     gearType,
     dailyPrice,
     salePrice,
+    discount,
     people,
     isSale,
   } = props;
@@ -32,6 +33,11 @@ const Car = (props) => {
       </S.TopContainer>
       <S.CarThumbnail>
         <img src={thumnailSrc} alt={carName} />
+        {isSale && (
+          <S.SaleTag>
+            <S.SalePercent>Sale {discount}%</S.SalePercent>
+          </S.SaleTag>
+        )}
       </S.CarThumbnail>
       <S.CarDetailsContainer>
         <S.CarDetail>
@@ -60,7 +66,7 @@ const Car = (props) => {
             ${isSale ? salePrice.toFixed(2) : dailyPrice.toFixed(2)} /{" "}
             <S.SmallText>day</S.SmallText>
           </S.DailyPrice>
-          {true && <S.InitialPrice>${dailyPrice.toFixed(2)}</S.InitialPrice>}
+          {isSale && <S.InitialPrice>${dailyPrice.toFixed(2)}</S.InitialPrice>}
         </S.PricesContainer>
         <Button className="car--rent-now">Rent Now</Button>
       </S.BottomContainer>
@@ -76,6 +82,7 @@ Car.propTypes = {
   gearType: PropTypes.string,
   dailyPrice: PropTypes.number,
   salePrice: PropTypes.number,
+  discount: PropTypes.number,
   people: PropTypes.number,
   isSale: PropTypes.bool,
 };

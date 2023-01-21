@@ -27,11 +27,20 @@ export const CarThumbnail = styled.div`
   height: 200px;
   margin-bottom: 8px;
   user-select: none;
+  position: relative;
 
   img {
     width: 100%;
     height: 100%;
   }
+`;
+
+export const SaleTag = styled.div`
+  ${tw`absolute top-[-11px] right-0 z-[2]`}
+`;
+
+export const SalePercent = styled.span`
+  ${tw`bg-[rgba(255, 53, 1, 0.8)] pt-[3px] pb-[3px] pl-[10px] pr-[10px] text-white text-[0.875em] rounded-[20px]`}
 `;
 
 export const CarDetailsContainer = styled.div`
