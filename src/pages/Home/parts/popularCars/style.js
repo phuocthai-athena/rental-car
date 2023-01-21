@@ -11,10 +11,6 @@ export const PopularCarsContainer = styled.div`
     line-height: 24px;
     letter-spacing: -0.02em;
     font-weight: 600;
-    &:hover {
-      color: white;
-      background-color: rgb(53 99 233);
-    }
     margin: auto;
     margin-top: 12px;
   }

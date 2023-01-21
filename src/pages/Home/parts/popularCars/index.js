@@ -51,7 +51,9 @@ const PopularCars = () => {
         })}
       </S.CarsContainer>
       <Link to="/cars">
-        <Button className="popular--show-more">Show more cars</Button>
+        <Button themes="outlined" className="popular--show-more">
+          Show more car
+        </Button>
       </Link>
     </S.PopularCarsContainer>
   );
