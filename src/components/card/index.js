@@ -1,27 +1,32 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Dropdown from "components/dropdown";
-import { ReactComponent as MarkBold } from "assets/icons/mark-bold.svg";
 
 import * as S from "./style";
 
-const Card = () => {
+const Card = (props) => {
+  const { children, title } = props;
+
   return (
     <S.CardContainer>
       <S.CardHeader>
-        <S.CardIcon>
-          <MarkBold />
-        </S.CardIcon>
-        <S.CardTitle>Pick - Up</S.CardTitle>
+        <S.CardIcon>{children}</S.CardIcon>
+        <S.CardTitle>{title}</S.CardTitle>
       </S.CardHeader>
       <S.CardOptions>
-        <Dropdown label="Locations" title="Select your city" />
-        <div className="mt-[16px] w-[2px] h-[48px] bg-[#C3D4E966]"></div>
-        <Dropdown />
-        <div className="mt-[16px] w-[2px] h-[48px] bg-[#C3D4E966]"></div>
-        <Dropdown />
+        <Dropdown label="Locations" title="Select your city"></Dropdown>
+        <S.LineSeparate />
+        <Dropdown label="Date" title="Select your date"></Dropdown>
+        <S.LineSeparate />
+        <Dropdown label="Time" title="Select your time"></Dropdown>
       </S.CardOptions>
     </S.CardContainer>
   );
+};
+
+Card.propTypes = {
+  children: PropTypes.node,
+  title: PropTypes.string,
 };
 
 export default Card;

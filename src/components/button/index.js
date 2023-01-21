@@ -11,13 +11,20 @@ const Button = (props) => {
     styles = "primary",
     themes = "filled",
     isLoading = false,
+    className,
     ...rest
   } = props;
 
   const child = !!isLoading ? <LoadingSpinner /> : children;
 
   return (
-    <S.Button type={type} {...rest} styles={styles} themes={themes}>
+    <S.Button
+      className={className}
+      type={type}
+      {...rest}
+      styles={styles}
+      themes={themes}
+    >
       {child}
     </S.Button>
   );
@@ -27,8 +34,9 @@ Button.propTypes = {
   type: PropTypes.string.isRequired,
   styles: PropTypes.string,
   themes: PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.node || PropTypes.string,
   isLoading: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 export default Button;
