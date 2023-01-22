@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
     right-0
     z-[999]
     w-full
-    h-[124px]
+    h-[80px]
     flex
     items-center
     justify-between
