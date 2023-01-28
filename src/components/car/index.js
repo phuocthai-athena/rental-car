@@ -7,9 +7,11 @@ import { ReactComponent as CarMachineIcon } from "assets/icons/machine-car.svg";
 import { ReactComponent as PeopleIcon } from "assets/icons/people.svg";
 
 import * as S from "./style";
+import { Link } from "react-router-dom";
 
 const Car = (props) => {
   const {
+    id,
     carName,
     carType,
     thumnailSrc,
@@ -32,7 +34,9 @@ const Car = (props) => {
         <LikeToogle />
       </S.TopContainer>
       <S.CarThumbnail>
-        <img src={thumnailSrc} alt={carName} />
+        <Link to={`/cars/${id}`}>
+          <img src={thumnailSrc} alt={carName} />
+        </Link>
         {isSale && (
           <S.SaleTag>
             <S.SalePercent>Sale {discount}%</S.SalePercent>
@@ -68,13 +72,18 @@ const Car = (props) => {
           </S.DailyPrice>
           {isSale && <S.InitialPrice>${dailyPrice.toFixed(2)}</S.InitialPrice>}
         </S.PricesContainer>
-        <Button className="car--rent-now">Rent Now</Button>
+        <Link to={`/cars/${id}`}>
+          <Button type="button" className="car--rent-now">
+            Rent Now
+          </Button>
+        </Link>
       </S.BottomContainer>
     </S.CarContainer>
   );
 };
 
 Car.propTypes = {
+  id: PropTypes.string,
   carName: PropTypes.string,
   carType: PropTypes.string,
   thumnailSrc: PropTypes.string,

@@ -23,6 +23,7 @@ const CarsPage = () => {
   };
 
   const testCar2 = {
+    id: "123",
     carName: "Koenigsegg",
     carType: "Sedan",
     thumnailSrc:
@@ -51,8 +52,8 @@ const CarsPage = () => {
             }
           >
             <S.Content>
-              {items.map((item) => (
-                <Car key={item} {...testCar2} />
+              {items.map((item, index) => (
+                <Car key={index} {...testCar2} />
               ))}
               <S.NumberOfList>
                 <S.NumberTitle>item of list</S.NumberTitle> {items.length} / 70

@@ -68,7 +68,7 @@ export const BottomContainer = styled.div`
 `;
 
 export const PricesContainer = styled.div`
-  ${tw`flex flex-col`}
+  ${tw`flex flex-col select-none`}
 `;
 
 export const DailyPrice = styled.div`
