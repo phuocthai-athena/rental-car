@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 
-export const FilterContainer = styled.div``;
+export const FilterContainer = styled.div`
+  ${tw`min-w-[288px] bg-white h-fit rounded-br-[10px] border border-[#f3f5f7]`}
+`;
 
 export const FilterWrapper = styled.div`
   ${tw`flex flex-col pt-5 pb-4 pl-8 pr-8`}

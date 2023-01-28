@@ -13,7 +13,6 @@ const LayoutCars = (props) => {
       <Header />
       <S.Body>
         <Filter />
-        <div className="w-[288px]"></div>
         {children}
       </S.Body>
       <Footer />
