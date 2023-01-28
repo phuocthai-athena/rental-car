@@ -19,7 +19,9 @@ export default function useClickOutSide(dom = "button") {
     return () => {
       document.removeEventListener("click", handleClickOutSide);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   return {
     nodeRef,
     show,
