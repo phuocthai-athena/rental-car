@@ -38,43 +38,41 @@ const CarsPage = () => {
   };
 
   return (
-    <>
-      <LayoutCars>
-        <S.CarPageContainer>
-          <InfiniteScroll
-            dataLength={items.length}
-            next={fetchMoreData}
-            hasMore={hasMore}
-            loader={
-              <S.LoadingContainer>
-                <LoadingSpinner color="primary" size="medium" />
-              </S.LoadingContainer>
-            }
-          >
-            <S.Content>
-              {items.map((item, index) => (
-                <Car key={index} {...testCar2} />
-              ))}
-              <S.NumberOfList>
-                <S.NumberTitle>item of list</S.NumberTitle> {items.length} / 70
-              </S.NumberOfList>
-            </S.Content>
-          </InfiniteScroll>
-        </S.CarPageContainer>
-        <ScrollToTop
-          showUnder={200}
-          style={{
-            transitionDuration: "0.2s",
-            transitionTimingFunction: "linear",
-            transitionDelay: "0.2s",
-          }}
+    <LayoutCars>
+      <S.CarPageContainer>
+        <InfiniteScroll
+          dataLength={items.length}
+          next={fetchMoreData}
+          hasMore={hasMore}
+          loader={
+            <S.LoadingContainer>
+              <LoadingSpinner color="primary" size="medium" />
+            </S.LoadingContainer>
+          }
         >
-          <S.ScrollTopContainer>
-            <ArrowOnTopIcon />
-          </S.ScrollTopContainer>
-        </ScrollToTop>
-      </LayoutCars>
-    </>
+          <S.Content>
+            {items.map((item, index) => (
+              <Car key={index} {...testCar2} />
+            ))}
+            <S.NumberOfList>
+              <S.NumberTitle>item of list</S.NumberTitle> {items.length} / 70
+            </S.NumberOfList>
+          </S.Content>
+        </InfiniteScroll>
+      </S.CarPageContainer>
+      <ScrollToTop
+        showUnder={200}
+        style={{
+          transitionDuration: "0.2s",
+          transitionTimingFunction: "linear",
+          transitionDelay: "0.2s",
+        }}
+      >
+        <S.ScrollTopContainer>
+          <ArrowOnTopIcon />
+        </S.ScrollTopContainer>
+      </ScrollToTop>
+    </LayoutCars>
   );
 };
 
