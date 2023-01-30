@@ -1,6 +1,7 @@
 import React from "react";
 import LayoutCars from "layout/layoutCars";
 import CarInfor from "./parts/carInfor";
+import CarSlide from "./parts/slide";
 
 import * as S from "./style";
 
@@ -9,10 +10,10 @@ const CarDetail = () => {
     <LayoutCars>
       <S.Container>
         <S.InforWrapper>
-          <div className="wrapper slider w-[492px] h-[508px] bg-primaryDefault"></div>
+          <CarSlide />
           <CarInfor />
         </S.InforWrapper>
-        <div>review</div>
+        <div>Review</div>
       </S.Container>
     </LayoutCars>
   );

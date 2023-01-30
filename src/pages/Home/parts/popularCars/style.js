@@ -28,5 +28,12 @@ export const ButtonViewAll = styled.span`
 `;
 
 export const CarsContainer = styled.div`
-  ${tw`flex flex-wrap justify-center w-full gap-8 mt-[30px] mb-[42px]`}
+  ${tw`flex flex-wrap justify-between w-full mt-[30px] mb-[42px] h-[430px]`}
+  .mySwiper {
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 `;

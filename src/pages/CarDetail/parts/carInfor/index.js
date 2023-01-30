@@ -18,9 +18,7 @@ const CarInfor = () => {
       </S.CarInforReview>
       <S.CarInforDesc>
         NISMO has become the embodiment of Nissan's outstanding performance,
-        inspired by the most unforgiving proving ground, the "race track". NISMO
-        has become the embodiment of Nissan's outstanding performance, inspired
-        by the most unforgiving proving ground, the "race track".
+        inspired by the most unforgiving proving ground, the "race track".
       </S.CarInforDesc>
       <S.CarInforDataWrapper>
         <S.CarInforData>

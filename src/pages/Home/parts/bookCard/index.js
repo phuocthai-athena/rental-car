@@ -13,7 +13,7 @@ const BookCard = () => {
       <Card title="Pick - Up">
         <MarkPickUp />
       </Card>
-      <ButtonIcon>
+      <ButtonIcon type="button">
         <SwitchIcon />
       </ButtonIcon>
       <Card title="Drop - Off">

@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
 import Car from "components/car";
 import Button from "components/button";
-
+import "swiper/css";
 import * as S from "./style";
 
 const PopularCars = () => {
@@ -39,6 +41,10 @@ const PopularCars = () => {
     <Car {...testCar2} />,
     <Car {...testCar} />,
     <Car {...testCar2} />,
+    <Car {...testCar} />,
+    <Car {...testCar2} />,
+    <Car {...testCar} />,
+    <Car {...testCar2} />,
   ];
 
   return (
@@ -48,9 +54,23 @@ const PopularCars = () => {
         <S.ButtonViewAll>View All</S.ButtonViewAll>
       </S.TopPopular>
       <S.CarsContainer>
-        {cars.map((item) => {
-          return item;
-        })}
+        <Swiper
+          slidesPerView={4}
+          slidesPerGroup={4}
+          loop={true}
+          loopFillGroupWithBlank={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          modules={[Autoplay]}
+          className="mySwiper"
+        >
+          {cars.map((item) => {
+            return <SwiperSlide>{item}</SwiperSlide>;
+          })}
+        </Swiper>
       </S.CarsContainer>
       <Link to="/cars">
         <Button themes="outlined" className="popular--show-more">
