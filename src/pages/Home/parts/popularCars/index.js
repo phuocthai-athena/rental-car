@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import Car from "components/car";
 import Button from "components/button";
+
 import "swiper/css";
 import * as S from "./style";
 
