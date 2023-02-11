@@ -2,6 +2,7 @@ import React from "react";
 import LayoutCars from "layout/layoutCars";
 import CarInfor from "./parts/carInfor";
 import CarSlide from "./parts/slide";
+import Reviews from "./parts/reviews";
 
 import * as S from "./style";
 
@@ -13,7 +14,9 @@ const CarDetail = () => {
           <CarSlide />
           <CarInfor />
         </S.InforWrapper>
-        <div>Review</div>
+        <S.ReviewWrapper>
+          <Reviews />
+        </S.ReviewWrapper>
       </S.Container>
     </LayoutCars>
   );

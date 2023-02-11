@@ -23,3 +23,17 @@ export function onImageInView(entries, observer) {
     }
   });
 }
+
+export const pluralize = (word, count, inclusive) => {
+  if (!word) {
+    return "";
+  }
+
+  const newWord = count === 1 ? word : `${word}s`;
+
+  if (inclusive) {
+    return `${count} ${newWord}`;
+  }
+
+  return newWord;
+};

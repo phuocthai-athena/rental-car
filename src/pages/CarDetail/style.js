@@ -6,5 +6,9 @@ export const Container = styled.div`
 `;
 
 export const InforWrapper = styled.div`
-  ${tw`w-full flex flex-wrap gap-x-10`}
+  ${tw`flex flex-wrap w-full gap-x-10`}
+`;
+
+export const ReviewWrapper = styled.div`
+  ${tw`w-[1024px]`}
 `;
