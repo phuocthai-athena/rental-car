@@ -33,9 +33,13 @@ export const HeaderTitle = styled.h2`
 `;
 
 export const HeaderItems = styled.ul`
-  ${tw`flex gap-5 `}
+  ${tw`flex items-center justify-center gap-5`}
 `;
 
 export const HeaderItem = styled.li`
-  ${tw`text-xl font-medium capitalize cursor-pointer text-secondaryDefault hover:text-primaryDefault`}
+  ${tw`inline-block text-xl font-medium capitalize cursor-pointer text-secondaryDefault hover:text-primaryDefault`}
+`;
+
+export const HeaderImage = styled.img`
+  ${tw`h-[44px] w-[44px] rounded-[90px]`}
 `;

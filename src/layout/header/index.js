@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import AvatarDefault from "assets/images/avatar_default.png";
 
 import * as S from "./style";
 
@@ -13,12 +14,12 @@ const items = [
     url: "/cars",
   },
   {
-    title: "services",
-    url: "/services",
+    title: "rent",
+    url: "/rent",
   },
   {
-    title: "about us",
-    url: "/about-us",
+    title: "like",
+    url: "/like",
   },
 ];
 
@@ -42,6 +43,9 @@ const Header = () => {
               </NavLink>
             </S.HeaderItem>
           ))}
+        <S.HeaderItem>
+          <S.HeaderImage src={AvatarDefault} alt="Avatar" />
+        </S.HeaderItem>
       </S.HeaderItems>
     </S.HeaderContainer>
   );

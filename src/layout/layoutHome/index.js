@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "layout/header";
+import Footer from "layout/footer";
 
 import * as S from "./style";
-import Footer from "layout/footer";
 
 const LayoutHome = (props) => {
   const { children } = props;
